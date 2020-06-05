@@ -19,6 +19,7 @@ jobs:
         npm ci --no-audit
         node scripts/update-data
         npm run build
+        node scripts/update-svgs
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
